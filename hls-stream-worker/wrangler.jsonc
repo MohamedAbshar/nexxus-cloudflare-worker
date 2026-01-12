@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hls-stream-worker",
+  "main": "src/index.js",
+  "compatibility_date": "2025-09-27",
+
+  "observability": {
+    "enabled": true,
+  },
+
+  "r2_buckets": [
+    {
+      "binding": "R2_BUCKET",
+      "bucket_name": "test",
+      "preview_bucket_name": "test",
+    }
+  ]
+
+  // "placement": { "mode": "smart" }
+  // "vars": { "MY_VARIABLE": "production_value" }
+  // "assets": { "directory": "./public/", "binding": "ASSETS" }
+  // "services": [ { "binding": "MY_SERVICE", "service": "my-service" } ]
+}
